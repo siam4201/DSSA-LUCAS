@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Data & Large raw files
+data/images/
+*.zip
+*.tar.gz
+*.csv
+
+# Logs & Temporary files
+logs/
+*.log
+scratch/
+temp/
+
+# Large checkpoints (keep only the lightweight release weights)
+checkpoints/*
+!checkpoints/best_dssa_full_standard.pth
+!checkpoints/dssa_lite_best_seed42.pth
+
+# OS files
+.DS_Store
+Thumbs.db
