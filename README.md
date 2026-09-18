@@ -12,7 +12,13 @@ Ground-level visual observations often fail to discriminate visually identical v
 2. **Physics-Guided Modality Relevance Router (PGMR)**: Routes edaphic properties along surface and subsurface pathways guided by domain constraints.
 3. **Adaptive Zero-Soil Gating**: Attenuates unobservable soil cues in closed-canopy scenes.
 
-### Benchmark Results (Frozen Held-Out Test Set, N = 2,917)
+<p align="center">
+  <img src="figures/dssa_architecture.png" alt="DSSA Framework Overview" width="680"/>
+</p>
+
+---
+
+## Benchmark Results (Frozen Held-Out Test Set, N = 2,917)
 
 | Model Architecture | Modality Stream | Parameters | Test Accuracy | Macro F1 | Cohen's Kappa |
 | :--- | :--- | :---: | :---: | :---: | :---: |
@@ -23,6 +29,14 @@ Ground-level visual observations often fail to discriminate visually identical v
 | **DSSA-Lite (Edge)** | **RGB + Chemistry** | **3.99M** | **80.63%** | **0.7487** | **0.7553** |
 | **DSSA-Standard (Proposed)** | **RGB + Chemistry** | **8.42M** | **86.20%** | **0.8287** | **0.8286** |
 
+<p align="center">
+  <img src="figures/fig_transformer_comparison.png" alt="Transformer Comparison and Parameter Efficiency Frontier" width="760"/>
+</p>
+
+<p align="center">
+  <img src="figures/fig_confusion_matrix.png" alt="DSSA-Standard Test Confusion Matrix" width="480"/>
+</p>
+
 ---
 
 ## Repository Structure
@@ -32,6 +46,10 @@ Ground-level visual observations often fail to discriminate visually identical v
 ├── checkpoints/
 │   ├── best_dssa_full_standard.pth   # Proposed DSSA-Standard (86.20% Acc, 32.5 MB)
 │   └── dssa_lite_best_seed42.pth     # Proposed DSSA-Lite (80.63% Acc, 15.5 MB)
+├── figures/
+│   ├── dssa_architecture.png         # DSSA architecture framework diagram
+│   ├── fig_transformer_comparison.png# Focused Transformer benchmark comparison
+│   └── fig_confusion_matrix.png      # Normalized 6-class confusion matrix
 ├── src/
 │   ├── models/
 │   │   ├── dssa_model.py             # Full DSSA model implementation
@@ -55,8 +73,8 @@ Ground-level visual observations often fail to discriminate visually identical v
 ## Installation
 
 ```bash
-git clone <your-github-repo-url>
-cd <repo-name>
+git clone https://github.com/siam4201/DSSA-LUCAS.git
+cd DSSA-LUCAS
 pip install -r requirements.txt
 ```
 
@@ -104,5 +122,4 @@ python src/run_transformer_baselines.py --train_model swin --batch_size 64
 ## Pre-trained Weights & Hugging Face
 
 Pre-trained weights for DSSA-Standard and DSSA-Lite are available directly in `checkpoints/` and on the Hugging Face Model Hub:
-- Hugging Face Model Hub: `https://huggingface.co/Papahaven/DSSA-LUCAS`
-
+- Hugging Face Model Hub: [https://huggingface.co/Papahaven/DSSA-LUCAS](https://huggingface.co/Papahaven/DSSA-LUCAS)
