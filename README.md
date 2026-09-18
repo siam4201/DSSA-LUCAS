@@ -104,5 +104,5 @@ python src/run_transformer_baselines.py --train_model swin --batch_size 64
 ## Pre-trained Weights & Hugging Face
 
 Pre-trained weights for DSSA-Standard and DSSA-Lite are available directly in `checkpoints/` and on the Hugging Face Model Hub:
-- Hugging Face Model Hub: `https://huggingface.co/<your-hf-username>/DSSA-LUCAS`
+- Hugging Face Model Hub: `https://huggingface.co/Papahaven/DSSA-LUCAS`
 
