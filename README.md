@@ -55,8 +55,8 @@ Ground-level visual observations often fail to discriminate visually identical v
 ## Installation
 
 ```bash
-git clone <your-github-repo-url>
-cd <repo-name>
+git clone https://github.com/siam4201/DSSA-LUCAS.git
+cd DSSA-LUCAS
 pip install -r requirements.txt
 ```
 
