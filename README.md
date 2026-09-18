@@ -101,7 +101,8 @@ python src/run_transformer_baselines.py --train_model swin --batch_size 64
 
 ---
 
-## Pre-trained Checkpoints & Hugging Face
+## Pre-trained Weights & Hugging Face
 
-Full checkpoints, including the 105 MB Swin-Tiny weights and baseline models, are hosted on Hugging Face:
+Pre-trained weights for DSSA-Standard and DSSA-Lite are available directly in `checkpoints/` and on the Hugging Face Model Hub:
 - Hugging Face Model Hub: `https://huggingface.co/<your-hf-username>/DSSA-LUCAS`
+
